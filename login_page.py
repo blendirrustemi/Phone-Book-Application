@@ -27,9 +27,6 @@ class Login:
             get_username = username.get()
             get_password = a_pass.get()
 
-            # if (list(filter(lambda x: x['Name'] == get_username.lower(), db["users"]))) and
-            # (list(filter(lambda x: x['Password'] == get_password, db["users"]))): # this was used for dictionary/json file
-
             conn = mysql.connector.connect(host='localhost', port='3306', user='root', password='', database='contacts')
             cursor = conn.cursor()
             selectquery = "select UID, username, password from users where username = (%s) and password = (%s);"
