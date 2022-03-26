@@ -1,14 +1,12 @@
 import mysql.connector
 from tkinter import *
 from tkinter import filedialog
-# from PIL import ImageTk, Image
 import search_contact
 
 
 class pic_upload:
 
     def __init__(self, UID):
-        # self.NID = NID
         self.UID = UID
 
     def profile_picture(self):
@@ -20,7 +18,6 @@ class pic_upload:
 
         print(file_path)
 
-        # root = Tk()
         canvas = Canvas(root, width=300, height=300)
         canvas.pack()
 
@@ -33,7 +30,6 @@ class pic_upload:
 
 
         showquery ="update numbers set profilepic='" + file_path + "'where UID =" + str(self.UID) + ";"
-        # values = (file_path)
         cursor.execute(showquery)
         conn.commit()
 
