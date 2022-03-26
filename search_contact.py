@@ -66,7 +66,6 @@ class Contacts:
 
 
                     def done_func():
-                        # root.destroy()
                         text.destroy()
                         try:
                             label.destroy()
@@ -90,6 +89,3 @@ class Contacts:
         rg_button.grid(row=4, column=0)
 
         root.mainloop()
-
-# pertestim = Contacts(1)
-# pertestim.contact_search()
