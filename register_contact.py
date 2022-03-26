@@ -1,7 +1,5 @@
 from tkinter import *
-# from tkinter import filedialog
 from upload_picture import pic_upload
-# from TEST2 import pic_upload
 
 import search_contact
 import mysql.connector
@@ -9,7 +7,6 @@ import mysql.connector
 class Register:
     def __init__(self, UID):
         self.UID = UID
-        # self.NID = 1
 
     def reg_contact(self):
 
@@ -41,14 +38,6 @@ class Register:
             conn = mysql.connector.connect(host='localhost', port='3306', user='root', password='', database='contacts')
             cursor = conn.cursor()
 
-            # showquery = "select * from numbers"
-            # cursor.execute(showquery)
-            # records = cursor.fetchall()
-            #
-            # for i in records:
-            #     if i[0] == self.NID:
-            #         self.NID += 1
-
             selectquery = "Insert into numbers(UID, Name, Phone_Number) values(%s,%s,%s)"
             values = ( self.UID, get_contact_name, get_contact_number)
             cursor.execute(selectquery, values)
@@ -77,8 +66,3 @@ class Register:
 
 
         root.mainloop()
-
-# testi = Register(1)
-# testi.reg_contact()
-
-#new test
