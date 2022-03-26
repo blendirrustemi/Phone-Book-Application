@@ -66,12 +66,4 @@ def save_num(name, password, get_phone):
     cursor.execute(selectquery, values)
     conn.commit()
 
-
-    # db["users"].append({"Name": name, "PhoneNumber": phone, 'Password': password})
-    # with open(filename, 'w') as file_object:
-    #     json.dump(db, file_object)
-
-
 sign_up()
-
-#new test A PO NDRRON
